@@ -9,6 +9,4 @@ The course is structured into several modules, each focusing on different aspect
 1. **Getting Started**
    - How to install python and Jupyter Notebooks
    - Variables, data types, and operators
-   - Control flow (if statements, loops)
-
-
+   - Basics of Pandas DataFrames
