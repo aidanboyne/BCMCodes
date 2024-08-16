@@ -13,7 +13,7 @@ The course is structured into several modules, each focusing on different aspect
   
 Upcoming Workshops:
 - Conditional logic and loops (essential for large scale data processing)
-- Basic statistical tests in python and when to use them (t-tests, Chi-squared...)
+- Basic statistical tests in python and when to use them (t-tests, Chi-squared, correlation coefficients, and more)
 - Plotting data: figures for posters and publications
 - How to efficiently use LLMs (e.g. ChatGPT, Claude, etc.) when coding
 - Regressions and covariate analysis
