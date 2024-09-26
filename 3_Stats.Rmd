@@ -4,6 +4,7 @@ output: html_document
 ---
 
 Notes about R
+
 <- and = mean the same thing
 
 Access columns of dataframes using $ e.g. People$MS1
