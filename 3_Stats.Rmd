@@ -1,7 +1,6 @@
 ---
 title: "3_Stats"
 output: html_document
-date: "2024-09-15"
 ---
 
 Notes about R
@@ -37,7 +36,7 @@ Components of a statistical test
   
 Example: Your friend bets you $100 they can flip 10 heads in a row. To your surprise they do, how do we prove that they're a fraud?
 
-Hypotheses: $H_0:$ $p=.5$, $H_A$ $p\neq .5$. Meaning our null hypothesis is that the coin is fair, while our alternate hypothesis is that it is not fair.
+Hypotheses: $H_0:$ $p=.5$, $H_A$ $p> .5$. p is the probability of getting heads, meaning our null hypothesis is that the coin is fair, while our alternate hypothesis is that it is biased to heads.
 
 In this case let's calculate the chance of our friend flipping 10 heads in a row assuming the null hypothesis is true.
 ```{r}
@@ -89,6 +88,10 @@ How do you decide what test to use? Look at what you are measuring and the assum
 -**t-test/z-test** - compares numeric data between two groups, looking at if the means are different. It assumes the data is normally distributed, differing SD/SE assumptions. .
 
 -**ANOVA** - Compare 3 or more groups of numerical data/means, while previously mentioned tests compare two groups.
+
+```{r echo=FALSE, fig.cap="Uworld Entry ", out.width = '75%'}
+knitr::include_graphics("Media/uworld.png")
+```
 
 Rule of thumb t-test for n<30, z-test otherwise
 
@@ -201,6 +204,10 @@ Hypotheses: $H_0:$ means of all groups are equal, $H_A:$ one of the groups diffe
 
 # Regression
 
+```{r pressure, echo=FALSE, fig.cap="A caption", out.width = '75%'}
+knitr::include_graphics("Media/regress.png")
+```
+
 Linear Regression: $y = \beta_0+\beta_1x_1+\beta_2x_2+...+\beta_nx_n$
 
 $x_i$ is a predictor variable
@@ -220,7 +227,7 @@ https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction
 We give an example of logistic regression here, the principles are the same as linear regression. We want to know if we can use the data to predict whether a patient will have some heart disease.
 
 ```{r}
-data<-read.csv('heart.csv')
+data<-read.csv('Data/heart.csv')
 data$HeartDisease<-factor(data$HeartDisease,levels=c(0,1), labels=c("No", "Yes"))
 ```
 
@@ -245,6 +252,10 @@ model <- train(HeartDisease~.,
 summary(model)
 ```
 AIC measures goodness of fit while discounting for more variables (penalize overfitting), lower is better.
+
+The Estimate column is what it approximates the coefficient for each variable as, what does it mean if something is positive or negative?
+
+When the variable is increased by 1 unit, the output variable changes by one unit. E.g. a 1 year increase in age corresponds to a 0.016550 log odd increase in heart disease. (in linear regression the interpretation is easier as it's an increase in your predictor variable units rather than log odds like logistic regression)
 
 What is the pr column telling us? Essentially, a one sample t-test is performed with each coefficient with the null hypothesis that the coefficient is equal to zero (doesn't actually contribute to our model). What do we do with this information? Depends on your goals and domain expertise. It looks like cholesterol is a significant predictor, but the coefficient is estimated to be negative. Negative correlation between cholesterol and heart disease doesn't really make sense, the data itself might not be great here...
 
@@ -279,6 +290,24 @@ https://developers.google.com/machine-learning/crash-course/classification/roc-a
 ```
 
 # Go Further
+
+## Residuals
+
+Plotting the errors (residuals) against the predicted value in linear regression can help you uncover if your data breaks the assumption of the model, and tells you a bit about how you should model your data. If the residual looks pretty random and spread out, it indicates the residuals have the same variance and that a linear model works well here.
+
+```{r echo=FALSE, fig.cap="Good Residual", out.width = '75%'}
+knitr::include_graphics("Media/goodresidual.png")
+```
+
+```{r echo=FALSE, fig.cap="Heteroscedastic", out.width = '75%'}
+knitr::include_graphics("Media/heteroscedastic.jpg")
+```
+
+```{r echo=FALSE, fig.cap="Nonlinear", out.width = '75%'}
+knitr::include_graphics("Media/residual.png")
+```
+
+https://online.stat.psu.edu/stat462/node/120/ (can also check out lessons 4.3 and 4.4 in table of contents in this link)
 
 ## Data Exploration
 We did not cover exploratory data analysis on our kaggle data, an example of doing this can be seen here: 
