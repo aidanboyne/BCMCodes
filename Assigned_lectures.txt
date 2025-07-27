@@ -1,0 +1,63 @@
+Schedule: Term 1 (Tuesday 7-8pm) 
+
+Enrollment: 15 (MS1 and 2) – split questions up between Cameron/Aidan/Rohan first 
+
+All lectures are recorded. Pre-post survey with Likert confidence scales to gauge efficacy and justify for future years (redcap). 
+
+Week 0 - 7/29: Intro + ‘How to think in code’ + warning about LLM and why this class is important (All lecture) 
+
+Download everything – send email with links for Mac/Windows OS 
+
+PPT:  
+
+Week 1 - 8/5:  Setting up environment and basic coding tools... everything without imported libraries (All lecture) 
+
+Week 2 - 8/12:  Conditional logic and loops + debugging (Rohan) 
+
+Genetics activity 
+
+Week 3 - 8/19:  DataFrames (Aidan) 
+
+https://www.kaggle.com/datasets/adilshamim8/social-media-addiction-vs-relationships 
+
+Week 4 - 8/26: Visualizing Data (Cameron) 
+
+When to use what plots 
+
+Basics of matplotlib and seaborn 
+
+Publication quality figures 
+
+Week 5 - 9/9: AI models, when to use, how to evaluate (Cameron/Rohan) 
+
+Introduce regression (linear/logistic), clustering, supervised/unsupervised 
+
+Overview of what exists 
+
+Importance of cross validation, data leakage 
+
+AUC, F1, .... 
+
+Week 6 - 9/16: Working with Image Data for AI/ML Applications (All lecture) 
+
+https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia 
+
+Week 7 - 9/23: Utilizing Tabular Data for AI/ML Applications (Aidan) 
+
+See week 3 dataset 
+
+Parametric vs. Nonparametric modeling 
+
+Extra – explainability via SHAP... etc. 
+
+These may be shorter, can continue other projects 
+
+Week 8 - 9/30: Integrating AI/ML Into Healthcare Workflows  (Rohan) 
+
+Week 9 - 10/7: Ethics of AI Models  (Rohan) 
+
+Week 10 - 10/14: Wrap up and show final projects (All lecture) 
+
+Think of project 
+
+Identify what kind of data needed, what models are best suited, how to evaluate and disseminate results 
